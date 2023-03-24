@@ -1,3 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow:wght@600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Tomorrow", sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    position: relative;
+    background: linear-gradient(
+      180deg,
+      rgba(98, 106, 136, 0.1) 0%,
+      rgba(46, 49, 73, 0.1) 107.43%
+    );
+    backdrop-filter: blur(50px);
+  }
+
+  .curve::before {
+    background: linear-gradient(#1c1f34, #1c1f34) padding-box,
+      linear-gradient(to bottom, rgb(236 240 255 / 25%), #0000, #14172b00)
+        border-box;
+    border-right: 1px solid transparent;
+  }
+
+  .curve::after {
+    background: linear-gradient(#1c1f34, #1c1f34) padding-box,
+      linear-gradient(to bottom, rgb(236 240 255 / 25%), #0000, #14172b00)
+        border-box;
+    border-left: 1px solid transparent;
+  }
+
+  .element-shadow {
+    background: linear-gradient(#14172b, #14172b) padding-box,
+      linear-gradient(to bottom, rgba(236, 240, 255, 0.1), rgba(46, 49, 73, 0))
+        border-box;
+    border: 1px solid transparent;
+  }
+}
